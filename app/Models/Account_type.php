@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Account_type extends Model
 {
     use HasFactory;
+    protected $fillable = [''];
 }
