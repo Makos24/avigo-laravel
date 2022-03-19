@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Birth_contact extends Model
 {
     use HasFactory;
+    protected $fillable = [''];
 }
