@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Name extends Model
+class Flagged_Registration extends Model
 {
     use HasFactory;
-    protected $fillable = ['name'];
+
+    protected $guarded = ['id'];
 }
