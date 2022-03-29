@@ -19,5 +19,10 @@ class Edd extends Model
     public function name(){
         return $this->hasOne(Name::class,'id','mother');
     }
+
+    public function birth_gender()
+    {
+        return $this->hasOne(Birth_Gender::class, 'edd_id');
+    }
     
 }

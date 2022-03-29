@@ -33,4 +33,5 @@ class Parent_detail extends Model
     {
         return $this->hasMany(Parent_Notification::class, 'parent_id');
     }
+    
 }

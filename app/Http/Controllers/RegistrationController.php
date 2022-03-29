@@ -97,6 +97,8 @@ class RegistrationController extends Controller
             'phone' => $this->cleanPhone($item['phone']),
             'mother' => $mother->id,
         ]);
+
+        $e->birth_gender()->create();
     
     }
 
