@@ -1,0 +1,365 @@
+
+birth report 2022-04-15 10:05:01
+birth report 2022-04-29
+birth report 2022-04-29
+   ErrorException 
+
+  Undefined variable: ivr_function
+
+  at C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\app\Console\Commands\setup_birth_report_reminder.php:44
+     40▕      */
+     41▕     public function handle()
+     42▕     {
+     43▕        
+  ➜  44▕         echo "\nbirth report ".$ivr_function->getDateAhead(14);
+     45▕         //return 'birth report';
+     46▕     }
+     47▕     function setup_reminder(){
+     48▕         /* $query= "SELECT edd.EddID,edd.Mother,edd.ParentID,parent_details.Phone,parent_details.LangID FROM `edd`
+
+  1   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\app\Console\Commands\setup_birth_report_reminder.php:44
+      Illuminate\Foundation\Bootstrap\HandleExceptions::handleError("Undefined variable: ivr_function", "C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\app\Console\Commands\setup_birth_report_reminder.php", [])
+
+  2   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      App\Console\Commands\setup_birth_report_reminder::handle()
+
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+birth report 
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'edd_notif' in 'where clause' (SQL: select exists(select * from `edds` where `edd` between 2022-04-15 11:01:02 and 2022-04-29 and `edd_notif` != 0) as `exists`)
+
+  at C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php:712
+    708▕         // If an exception occurs when attempting to run a query, we'll format the error
+    709▕         // message to include the bindings with SQL, which will make this exception a
+    710▕         // lot more helpful to the developer instead of just the database's errors.
+    711▕         catch (Exception $e) {
+  ➜ 712▕             throw new QueryException(
+    713▕                 $query, $this->prepareBindings($bindings), $e
+    714▕             );
+    715▕         }
+    716▕     }
+
+  • A column was not found: You might have forgotten to run your migrations. You can run your migrations using `php artisan migrate`. 
+    https://laravel.com/docs/master/migrations#running-migrations
+
+  1   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php:368
+      PDOException::("SQLSTATE[42S22]: Column not found: 1054 Unknown column 'edd_notif' in 'where clause'")
+
+  2   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php:368
+      PDO::prepare("select exists(select * from `edds` where `edd` between ? and ? and `edd_notif` != ?) as `exists`")
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'edd_notif' in 'where clause' (SQL: select exists(select * from `edds` where `edd` between 2022-04-15 11:02:01 and 2022-04-29 and `edd_notif` != 0) as `exists`)
+
+  at C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php:712
+    708▕         // If an exception occurs when attempting to run a query, we'll format the error
+    709▕         // message to include the bindings with SQL, which will make this exception a
+    710▕         // lot more helpful to the developer instead of just the database's errors.
+    711▕         catch (Exception $e) {
+  ➜ 712▕             throw new QueryException(
+    713▕                 $query, $this->prepareBindings($bindings), $e
+    714▕             );
+    715▕         }
+    716▕     }
+
+  • A column was not found: You might have forgotten to run your migrations. You can run your migrations using `php artisan migrate`. 
+    https://laravel.com/docs/master/migrations#running-migrations
+
+  1   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php:368
+      PDOException::("SQLSTATE[42S22]: Column not found: 1054 Unknown column 'edd_notif' in 'where clause'")
+
+  2   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php:368
+      PDO::prepare("select exists(select * from `edds` where `edd` between ? and ? and `edd_notif` != ?) as `exists`")
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'edd_notif' in 'where clause' (SQL: select exists(select * from `edds` where `edd` between 2022-04-15 11:03:01 and 2022-04-29 and `edd_notif` != 0) as `exists`)
+
+  at C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php:712
+    708▕         // If an exception occurs when attempting to run a query, we'll format the error
+    709▕         // message to include the bindings with SQL, which will make this exception a
+    710▕         // lot more helpful to the developer instead of just the database's errors.
+    711▕         catch (Exception $e) {
+  ➜ 712▕             throw new QueryException(
+    713▕                 $query, $this->prepareBindings($bindings), $e
+    714▕             );
+    715▕         }
+    716▕     }
+
+  • A column was not found: You might have forgotten to run your migrations. You can run your migrations using `php artisan migrate`. 
+    https://laravel.com/docs/master/migrations#running-migrations
+
+  1   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php:368
+      PDOException::("SQLSTATE[42S22]: Column not found: 1054 Unknown column 'edd_notif' in 'where clause'")
+
+  2   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php:368
+      PDO::prepare("select exists(select * from `edds` where `edd` between ? and ? and `edd_notif` != ?) as `exists`")
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'edd_notif' in 'where clause' (SQL: select exists(select * from `edds` where `edd` between 2022-04-15 11:04:01 and 2022-04-29 and `edd_notif` != 0) as `exists`)
+
+  at C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php:712
+    708▕         // If an exception occurs when attempting to run a query, we'll format the error
+    709▕         // message to include the bindings with SQL, which will make this exception a
+    710▕         // lot more helpful to the developer instead of just the database's errors.
+    711▕         catch (Exception $e) {
+  ➜ 712▕             throw new QueryException(
+    713▕                 $query, $this->prepareBindings($bindings), $e
+    714▕             );
+    715▕         }
+    716▕     }
+
+  • A column was not found: You might have forgotten to run your migrations. You can run your migrations using `php artisan migrate`. 
+    https://laravel.com/docs/master/migrations#running-migrations
+
+  1   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php:368
+      PDOException::("SQLSTATE[42S22]: Column not found: 1054 Unknown column 'edd_notif' in 'where clause'")
+
+  2   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php:368
+      PDO::prepare("select exists(select * from `edds` where `edd` between ? and ? and `edd_notif` != ?) as `exists`")
+
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+ here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here
+ here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here
+ here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here here
+
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+   ParseError 
+
+  syntax error, unexpected ';'
+
+  at C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\app\Console\Commands\send_birth_report_reminder.php:45
+     41▕         $response=$notif->birth_report_reminder();
+     42▕         if($response==true){
+     43▕             echo 'Birth Report Reminder Sent!';
+     44▕         }else{
+  ➜  45▕             echo 'Birth Report Reminder Not Sent!'.;
+     46▕         }
+     47▕     }
+     48▕ }
+     49▕
+
+  1   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer\ClassLoader.php:346
+      Composer\Autoload\includeFile("C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer/../../app\Console\Commands\send_birth_report_reminder.php")
+
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass("App\Console\Commands\send_birth_report_reminder")
+
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
+Birth Report Setup Done!
