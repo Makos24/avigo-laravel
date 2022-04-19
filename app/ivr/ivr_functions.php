@@ -5,6 +5,8 @@ use App\Models\Name;
 use App\Models\Phc_notification;
 use App\Models\Birth_contact;
 use App\Models\Birth_notification;
+use Carbon\Carbon;
+
 class ivr_functions{
     function __construct()
 	{
@@ -207,11 +209,12 @@ class ivr_functions{
 
     function updatePhcNotification($FacID, $phcPhone, $phcEmail, $NumberDelivered)
     {
+        $this_week_start=Carbon::now()->subDays(Carbon::now()->dayOfWeek)->setTime(0,0);
         $phc_notifications = new Phc_notification();
         $phc_notification = $phc_notifications::where('id', $FacID)
-                ->whereDate('created_at','>',$this->dateGetterFromNumberOfDays(-7))
-                ->whereDate('created_at','>',date('Y-m-d'));
+                            ->whereDate('created_at','>=', $this_week_start);;
         if ($phc_notification->exists()) {
+            $phc_notification=$phc_notification->get()->first();
             $phc_notification->new_births +=$NumberDelivered;
             $phc_notification->save();
         } else {
