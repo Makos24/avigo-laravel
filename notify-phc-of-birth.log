@@ -1,0 +1,142 @@
+Update notice sent!
+
+   ParseError 
+
+  syntax error, unexpected ';', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+
+  at C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\app\Http\Controllers\Emails.php:46
+     42▕             $this_week_start=Carbon::now()->subDays(Carbon::now()->dayOfWeek)->setTime(0,0);
+     43▕             $phc_notifs=new Phc_notification();
+     44▕             $phc_notifs=$phc_notifs::with('phc')
+     45▕                 ->whereDate('created_at','>=', $this_week_start)
+  ➜  46▕                 ->;
+     47▕             if($phc_notifs->exists()){
+     48▕                 $phc_notifs=$phc_notifs->get();
+     49▕                 foreach($phc_notifs as $phc_notif){ 
+     50▕                     Mail::to($phc_notif->email)->send(new NotifyPhcOfBirth($phc_notif->phc->id,$phc_notif->phc->name,$phc_notif->phc->phone,$phc_notif->phc->facility_uid));
+
+  1   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer\ClassLoader.php:346
+      Composer\Autoload\includeFile("C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer/../../app/Http/Controllers/Emails.php")
+
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass("App\Http\Controllers\Emails")
+No update found!
+
+   ParseError 
+
+  syntax error, unexpected '}', expecting end of file
+
+  at C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\app\Http\Controllers\Emails.php:86
+     82▕             return $th->getMessage();
+     83▕         }
+     84▕     }
+     85▕ }
+  ➜  86▕ }
+     87▕
+
+  1   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer\ClassLoader.php:346
+      Composer\Autoload\includeFile("C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer/../../app/Http/Controllers/Emails.php")
+
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass("App\Http\Controllers\Emails")
+
+   ParseError 
+
+  syntax error, unexpected '}', expecting end of file
+
+  at C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\app\Http\Controllers\Emails.php:86
+     82▕             return $th->getMessage();
+     83▕         }
+     84▕     }
+     85▕ }
+  ➜  86▕ }
+     87▕
+
+  1   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer\ClassLoader.php:346
+      Composer\Autoload\includeFile("C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer/../../app/Http/Controllers/Emails.php")
+
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass("App\Http\Controllers\Emails")
+
+   ParseError 
+
+  syntax error, unexpected '}', expecting end of file
+
+  at C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\app\Http\Controllers\Emails.php:86
+     82▕             return $th->getMessage();
+     83▕         }
+     84▕     }
+     85▕ }
+  ➜  86▕ }
+     87▕
+
+  1   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer\ClassLoader.php:346
+      Composer\Autoload\includeFile("C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer/../../app/Http/Controllers/Emails.php")
+
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass("App\Http\Controllers\Emails")
+No update found!
+
+   ParseError 
+
+  syntax error, unexpected '$last_week_start' (T_VARIABLE)
+
+  at C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\app\Http\Controllers\Emails.php:66
+     62▕ 
+     63▕     function reminder_phc_of_birth(){
+     64▕         try {
+     65▕             Carbon::now()->wee
+  ➜  66▕             $last_week_start=Carbon::now()->subDays(Carbon::now()->dayOfWeek)->setTime(0,0);
+     67▕             $phc_notifs=new Phc_notification();
+     68▕             $phc_notifs=$phc_notifs::with('phc')
+     69▕                 ->whereDate('created_at','>=', $last_week_start)
+     70▕                 ->where('reminded',0);
+
+  1   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer\ClassLoader.php:346
+      Composer\Autoload\includeFile("C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer/../../app/Http/Controllers/Emails.php")
+
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass("App\Http\Controllers\Emails")
+
+   ParseError 
+
+  syntax error, unexpected '$last_week_start' (T_VARIABLE)
+
+  at C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\app\Http\Controllers\Emails.php:66
+     62▕ 
+     63▕     function reminder_phc_of_birth(){
+     64▕         try {
+     65▕             Carbon::now()->wee
+  ➜  66▕             $last_week_start=Carbon::now()->subDays(Carbon::now()->dayOfWeek)->setTime(0,0);
+     67▕             $phc_notifs=new Phc_notification();
+     68▕             $phc_notifs=$phc_notifs::with('phc')
+     69▕                 ->whereDate('created_at','>=', $last_week_start)
+     70▕                 ->where('reminded',0);
+
+  1   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer\ClassLoader.php:346
+      Composer\Autoload\includeFile("C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer/../../app/Http/Controllers/Emails.php")
+
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass("App\Http\Controllers\Emails")
+
+   ParseError 
+
+  syntax error, unexpected '$last_week_start' (T_VARIABLE)
+
+  at C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\app\Http\Controllers\Emails.php:66
+     62▕ 
+     63▕     function reminder_phc_of_birth(){
+     64▕         try {
+     65▕             Carbon::now()->wee
+  ➜  66▕             $last_week_start=Carbon::now()->subDays(Carbon::now()->dayOfWeek)->setTime(0,0);
+     67▕             $phc_notifs=new Phc_notification();
+     68▕             $phc_notifs=$phc_notifs::with('phc')
+     69▕                 ->whereDate('created_at','>=', $last_week_start)
+     70▕                 ->where('reminded',0);
+
+  1   C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer\ClassLoader.php:346
+      Composer\Autoload\includeFile("C:\Users\BERNARD EPHRAIM\Documents\MindcraftLabs Proposals\Mindcraft Labs Docs\other projects\avigohealth\laravel-project\aviog-laravel\vendor\composer/../../app/Http/Controllers/Emails.php")
+
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass("App\Http\Controllers\Emails")
+No update found!
