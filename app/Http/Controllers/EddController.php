@@ -7,16 +7,24 @@ use App\Models\Edd;
 use App\Models\Parent_detail;
 use Illuminate\Support\Facades\DB;
 
-class EddController extends Controller
+class PwaController extends Controller
 {
     //
-    function parent(){
-        $edd=new Edd();
-        return $edd::with('parent','phc')->get();
-        //$edd=db::table('parents','')->get();
-        //return $edd;
+    public function index()
+    {
+        return ['pwa' => 'PWA controller'];
     }
-    function state($parent_id){
-
+    public function upload(Request $request)
+    {
+        echo 'hello';
+       // return response()->json_decode($request);
+        // foreach($request->data as $data){
+        //     Parent_detail::firstOrCreate(
+        //         ['phone' => $data->phone],
+        //         [
+        //             'name' => $data->name
+        //         ]
+        //         );
+        // }
     }
 }

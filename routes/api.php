@@ -4,8 +4,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EddController;
 use App\Http\Controllers\IncomingIVRCall;
+
 use App\Http\Controllers\IncomingIVRCallRedirect;
 use App\Http\Controllers\OutgoingCall;
+
+use App\Http\Controllers\RegistrationController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +21,7 @@ use App\Http\Controllers\OutgoingCall;
 | is assigned the "api" middleware group. Enjoy building your API! Question4Girl
 |
 */
+
 Route::match(['get', 'post'], 'ivr-incoming/redirects/question1', [IncomingIVRCallRedirect::class,'question1']);
 Route::match(['get', 'post'], 'ivr-incoming/redirects/question1-negative', [IncomingIVRCallRedirect::class,'question1_negative']);
 Route::match(['get', 'post'], 'ivr-incoming/redirects/question2A', [IncomingIVRCallRedirect::class,'question2A']);
@@ -30,6 +35,12 @@ Route::match(['get', 'post'], 'ivr-incoming/redirects/question4-girl', [Incoming
 Route::match(['get', 'post'], 'ivr-incoming/redirects/question4-more-than-one-child', [IncomingIVRCallRedirect::class,'question4_more_than_one_child']);
 Route::match(['get', 'post'], 'ivr-incoming/redirects/question5', [IncomingIVRCallRedirect::class,'question5']);
 Route::match(['get', 'post'], 'ivr-incoming/redirects/question-none', [IncomingIVRCallRedirect::class,'question_none']);
+
+
+Route::get('/', function(){
+    return ['avigo-api' => 'Working'];
+});
+
 
 Route::match(['get', 'post'], 'ivr-incoming', [IncomingIVRCall::class,'ivrIncoming']);
 
@@ -46,3 +57,7 @@ Route::get('/parent', [EddController::class,'parent']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('/pwa', [RegistrationController::class, 'index']);
+Route::post('/upload-pwa', [RegistrationController::class, 'upload']);

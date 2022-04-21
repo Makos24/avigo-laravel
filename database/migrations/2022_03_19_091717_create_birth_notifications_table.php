@@ -17,7 +17,7 @@ class CreateBirthNotificationsTable extends Migration
             Schema::create('birth_notifications', function (Blueprint $table) {
                 $table->id();
                 $table->timestamps();
-                $table->string('name');
+                $table->string('nam');
             });
         }
     }
